@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AdaptiveLabel_Example' do
+  pod 'AdaptiveLabel', :path => '../'
+
+  target 'AdaptiveLabel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
