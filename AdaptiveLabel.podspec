@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AdaptiveLabel'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AdaptiveLabel.'
+  s.summary          = 'A UILabel subclass which adapts its font size and characer spacing to fit within constrained dimensions'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/AdaptiveLabel'
+  s.homepage         = 'https://github.com/eliasbagley/AdaptiveLabel'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Elias Bagley' => 'elias@rocketmade.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/AdaptiveLabel.git', :tag => s.version.to_s }
+  s.author           = { 'Elias Bagley' => 'elias.bagley@gmail.com' }
+  s.source           = { :git => 'https://github.com/eliasbagley/AdaptiveLabel.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AdaptiveLabel/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'AdaptiveLabel' => ['AdaptiveLabel/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+    s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,0 +1,16 @@
+PODS:
+  - AdaptiveLabel (0.1.0)
+
+DEPENDENCIES:
+  - AdaptiveLabel (from `../`)
+
+EXTERNAL SOURCES:
+  AdaptiveLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AdaptiveLabel: f2fb87f13cad54d5b3316c4f5b517d90d53aaf73
+
+PODFILE CHECKSUM: 08d14c5e4c94edc99944ccdad18960c708fb92f9
+
+COCOAPODS: 1.0.1

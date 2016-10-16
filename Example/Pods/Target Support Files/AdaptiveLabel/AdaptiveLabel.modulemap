@@ -1,0 +1,6 @@
+framework module AdaptiveLabel {
+  umbrella header "AdaptiveLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
