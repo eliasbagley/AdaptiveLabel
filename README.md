@@ -22,7 +22,7 @@ pod "AdaptiveLabel"
 
 ## Author
 
-Elias Bagley, elias@rocketmade.com
+Elias Bagley, elias.bagley@gmail.com
 
 ## License
 

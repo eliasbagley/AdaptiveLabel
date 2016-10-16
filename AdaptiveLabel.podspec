@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  AdaptiveLabel is a UILabel subclass which allows the font size and text spacing to grow to fit within constrained dimensions. It's usage is to create labels which have the same relative sizing across all iPhone screen sizes, by using AutoLayout constraints to constrain the label rather than setting the font directly. The options are FixedWidth, where the font size will grow until the fixed width is completely filled, allowing the height to grow freely; FixedHeight, where the font size will grow until the height is completely filled, allowing the width of the label to grow greely, or FidedWidthAndHeight, which increases the font size until the desired height is reached, and then increases the character spacing until the desired width is reached.
                        DESC
 
   s.homepage         = 'https://github.com/eliasbagley/AdaptiveLabel'
