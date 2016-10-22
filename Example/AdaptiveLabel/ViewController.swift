@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         let heightConstraint = NSLayoutConstraint(item: fixedWidthAndHeightLabel, attribute: .Height,
                                                   relatedBy: .Equal,
                                                   toItem: self.view, attribute: .Height,
-                                                  multiplier: 0.02, constant: 0.0)
+                                                  multiplier: 0.15, constant: 0.0)
         
         self.view.addConstraints([topConstraint, leftConstraint, rightConstraint, heightConstraint])
     }

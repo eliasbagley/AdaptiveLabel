@@ -53,17 +53,23 @@ public class AdaptiveLabel: UILabel {
     // config flags
     var hasBeenFit: Bool = false
     var shouldReconstrainOnEveryLayoutPass = false
+    var printDebugInfo: Bool = true
 
-    // Min and Max spacing to use during binary search
-    var MIN_SPACING: CGFloat = 0
+    // Min and Max character spacing to use during binary search
+    var MIN_SPACING: CGFloat = -30
     var MAX_SPACING: CGFloat = 30
 
     // Min and max font sizes to use during binary serach
-    var MIN_FONT: CGFloat = 5
+    var MIN_FONT: CGFloat = 0
     var MAX_FONT: CGFloat = 300
 
-    // A percetnage determining how close "close enough" is during binary search
-    var EPSILON: CGFloat = 0.02
+    // A percentage determining how close "close enough" is during binary search
+    var EPSILON: CGFloat = 0.001
+
+    // Number of binary search iterations to try before giving up
+    var iterationCount: Int = 0
+    var MAX_ITERATIONS: Int = 500
+
 
     private var fontSearcher: FloatBinarySearcher!
     private var spacingSearcher: FloatBinarySearcher!
@@ -151,6 +157,12 @@ public class AdaptiveLabel: UILabel {
         while comparison != .Equal {
             fontSearcher.update(comparison)
             comparison = areWeDoneYet(fontSearcher.current)
+
+            iterationCount += 1
+            if iterationCount > MAX_ITERATIONS {
+                printConverganceError()
+                break
+            }
         }
 
         updateText(fontSearcher.current)
@@ -162,13 +174,26 @@ public class AdaptiveLabel: UILabel {
         while reachedMaxHeight != .Equal {
             fontSearcher.update(reachedMaxHeight)
             reachedMaxHeight = hasReachedMaxHeight(fontSearcher.current)
+
+            iterationCount += 1
+            if iterationCount > MAX_ITERATIONS {
+                printConverganceError()
+                break
+            }
         }
+
+        self.iterationCount = 0
 
         // Binary search on spacing to fill out width
         var comparison = areWeDoneYet(fontSearcher.current, spacing: spacingSearcher.current)
         while comparison != .Equal {
             spacingSearcher.update(comparison)
             comparison = areWeDoneYet(fontSearcher.current, spacing: spacingSearcher.current)
+
+            iterationCount += 1
+            if iterationCount > MAX_ITERATIONS {
+                break
+            }
         }
 
         updateText(fontSearcher.current, spacing: spacingSearcher.current)
@@ -253,8 +278,35 @@ public class AdaptiveLabel: UILabel {
     private func updateText(fontSize: CGFloat, spacing: CGFloat? = nil) {
         self.font = getFont(fontSize)
         self.setText(self.myText, withSpacing: spacing)
+
+        if self.printDebugInfo {
+            self.debugLog(fontSize, spacing: spacing)
+        }
+    }
+
+
+}
+
+
+// MARK: Logging
+
+
+
+extension AdaptiveLabel {
+    private func debugLog(fontSize: CGFloat, spacing: CGFloat? = nil) {
+        if let spacing = spacing {
+            print("\(self): Converged to font size \(fontSize) and spacing \(spacing) in \(self.iterationCount) iterations")
+        } else {
+            print("\(self): Converged to font size \(fontSize) in \(self.iterationCount) iterations")
+        }
+    }
+
+    private func printConverganceError() {
+        print("\(self): Reached max of \(MAX_ITERATIONS) iterations. Unable to find solution")
     }
 }
+
+
 
 //MARK: Helpers
 
