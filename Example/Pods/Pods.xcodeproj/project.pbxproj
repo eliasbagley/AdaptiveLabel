@@ -15,12 +15,21 @@
 		8972D6EA31181DF818917D0234AE2275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		B15CC3068B866C1FE81577AFABEDE25C /* AdaptiveLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C623E0041636A3F06EBC0E4C354649 /* AdaptiveLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD24AB361DB42EFA00BC8F21 /* AdaptiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24AB351DB42EFA00BC8F21 /* AdaptiveLabel.swift */; };
+		BD95B2E91DBC00E400B25808 /* AdaptiveLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95B2E81DBC00E400B25808 /* AdaptiveLabelTests.swift */; };
+		BD95B2F41DBC02B600B25808 /* AdaptiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24AB351DB42EFA00BC8F21 /* AdaptiveLabel.swift */; };
 		CB108ACDCDC721C3AE35E67EA06335A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		CBC6EB576B039C1E4983B17D22438574 /* Pods-AdaptiveLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 305F3B4A4BB312A18272A85E141E61DC /* Pods-AdaptiveLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BA418D477AE25F7F5178C3D729B0E872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6390C0973D4882870525789FA57DD77B;
+			remoteInfo = AdaptiveLabel;
+		};
+		BD95B2EC1DBC00E400B25808 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -56,6 +65,9 @@
 		AF9637B4E86E2250D80439BAFD148815 /* Pods-AdaptiveLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AdaptiveLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC46BBF910283214A996D2A3D63140B1 /* AdaptiveLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdaptiveLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD24AB351DB42EFA00BC8F21 /* AdaptiveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveLabel.swift; sourceTree = "<group>"; };
+		BD95B2E61DBC00E400B25808 /* AdaptiveLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptiveLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD95B2E81DBC00E400B25808 /* AdaptiveLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveLabelTests.swift; sourceTree = "<group>"; };
+		BD95B2EA1DBC00E400B25808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DB72A203FB57D8859F1FC6864B0977C3 /* Pods-AdaptiveLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AdaptiveLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		E44ACE15EF12950F3EEAC39B213308AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +90,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				807085DC075B6709BB885073DF21C53B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD95B2E31DBC00E400B25808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +193,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				293E8BDE0017E9870A32661A56401A69 /* Development Pods */,
+				BD95B2E71DBC00E400B25808 /* AdaptiveLabelTests */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				FE0B9E548A2DB9172CD273EAF2CE6512 /* Products */,
 				22EA88E7EECBB2F6E07AC4E46DE8BA1F /* Targets Support Files */,
@@ -202,6 +222,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD95B2E71DBC00E400B25808 /* AdaptiveLabelTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD95B2E81DBC00E400B25808 /* AdaptiveLabelTests.swift */,
+				BD95B2EA1DBC00E400B25808 /* Info.plist */,
+			);
+			path = AdaptiveLabelTests;
+			sourceTree = "<group>";
+		};
 		D6D2718517C1D8BED0D041019C756C76 /* AdaptiveLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +247,7 @@
 				BC46BBF910283214A996D2A3D63140B1 /* AdaptiveLabel.framework */,
 				7D71B661E98C692F510882A511843921 /* Pods_AdaptiveLabel_Example.framework */,
 				1FB0BA7FA9B51DEC45C34A296B1D7E26 /* Pods_AdaptiveLabel_Tests.framework */,
+				BD95B2E61DBC00E400B25808 /* AdaptiveLabelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +316,24 @@
 			productReference = BC46BBF910283214A996D2A3D63140B1 /* AdaptiveLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		BD95B2E51DBC00E400B25808 /* AdaptiveLabelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD95B2EE1DBC00E400B25808 /* Build configuration list for PBXNativeTarget "AdaptiveLabelTests" */;
+			buildPhases = (
+				BD95B2E21DBC00E400B25808 /* Sources */,
+				BD95B2E31DBC00E400B25808 /* Frameworks */,
+				BD95B2E41DBC00E400B25808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD95B2ED1DBC00E400B25808 /* PBXTargetDependency */,
+			);
+			name = AdaptiveLabelTests;
+			productName = AdaptiveLabelTests;
+			productReference = BD95B2E61DBC00E400B25808 /* AdaptiveLabelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E752D4E69323E7A5352F2FDAE4EE0904 /* Pods-AdaptiveLabel_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53931E20789101F0AF1CDBE847BB273D /* Build configuration list for PBXNativeTarget "Pods-AdaptiveLabel_Example" */;
@@ -312,6 +360,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					BD95B2E51DBC00E400B25808 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -328,9 +381,20 @@
 				6390C0973D4882870525789FA57DD77B /* AdaptiveLabel */,
 				E752D4E69323E7A5352F2FDAE4EE0904 /* Pods-AdaptiveLabel_Example */,
 				03B0A6B08989BD2EC237CE86858743F6 /* Pods-AdaptiveLabel_Tests */,
+				BD95B2E51DBC00E400B25808 /* AdaptiveLabelTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD95B2E41DBC00E400B25808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		267C05283B9C5778A134244ED3C93FE1 /* Sources */ = {
@@ -347,6 +411,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				73E4F979F58BB27B004620F9DF4C908E /* Pods-AdaptiveLabel_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD95B2E21DBC00E400B25808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD95B2F41DBC02B600B25808 /* AdaptiveLabel.swift in Sources */,
+				BD95B2E91DBC00E400B25808 /* AdaptiveLabelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +440,11 @@
 			target = 6390C0973D4882870525789FA57DD77B /* AdaptiveLabel */;
 			targetProxy = BA418D477AE25F7F5178C3D729B0E872 /* PBXContainerItemProxy */;
 		};
+		BD95B2ED1DBC00E400B25808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6390C0973D4882870525789FA57DD77B /* AdaptiveLabel */;
+			targetProxy = BD95B2EC1DBC00E400B25808 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -374,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF9637B4E86E2250D80439BAFD148815 /* Pods-AdaptiveLabel_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -397,6 +476,7 @@
 				PRODUCT_NAME = Pods_AdaptiveLabel_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -407,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A89F2EC5F6C46F5A504A3D8F9042BEDE /* Pods-AdaptiveLabel_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -602,6 +683,54 @@
 			};
 			name = Debug;
 		};
+		BD95B2EF1DBC00E400B25808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = AdaptiveLabelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = eliasbagley.AdaptiveLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD95B2F01DBC00E400B25808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = AdaptiveLabelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = eliasbagley.AdaptiveLabelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -673,6 +802,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BD95B2EE1DBC00E400B25808 /* Build configuration list for PBXNativeTarget "AdaptiveLabelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD95B2EF1DBC00E400B25808 /* Debug */,
+				BD95B2F01DBC00E400B25808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		E3A463FAA2C8089C380E55F37439DCA6 /* Build configuration list for PBXNativeTarget "AdaptiveLabel" */ = {
 			isa = XCConfigurationList;
